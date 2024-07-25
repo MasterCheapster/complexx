@@ -16,8 +16,8 @@ after_success:
   - docker build -t mastercheap/multi-server ./server
   - docker build -t mastercheap/multi-worker ./worker
   # Log in to the docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  # Take those images and push them to docker hub
+  #- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take those images and push them to docker
   - docker push mastercheap/multi-client
   - docker push mastercheap/multi-nginx
   - docker push mastercheap/multi-server
